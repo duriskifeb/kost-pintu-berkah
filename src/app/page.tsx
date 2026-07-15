@@ -21,7 +21,7 @@ const GoogleIcon = () => (
 
 const WhatsAppIcon = ({ size = 28, className = "" }: { size?: number, className?: string }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
   </svg>
 );
 
@@ -35,7 +35,6 @@ const rooms = [
 const categories = [
   { Icon: User, name: "Kos Putra", count: "Tersedia" },
   { Icon: User, name: "Kos Putri", count: "Tersedia" },
-  { Icon: Users, name: "Kos Campur", count: "Tersedia" },
   { Icon: Building2, name: "Kos Keluarga", count: "Tersedia" },
 ];
 
@@ -44,14 +43,12 @@ const benefits = [
   "Keamanan 24 jam terjaga",
   "Lingkungan tenang & kondusif",
   "Air bersih & listrik tanpa gangguan",
-  "Pemilik ramah & responsif",
   "Fasilitas lengkap harga terjangkau",
 ];
 
 const fasilitasList = [
   { Icon: BedDouble, label: "Kasur & Bantal", desc: "Tersedia" },
   { Icon: ShowerHead, label: "Kamar Mandi", desc: "Dalam" },
-  { Icon: Wind, label: "Kipas / AC", desc: "Pilihan" },
   { Icon: ShieldCheck, label: "Keamanan", desc: "24 Jam" },
   { Icon: Droplets, label: "Air Bersih", desc: "PDAM" },
   { Icon: Car, label: "Parkir Motor", desc: "Gratis" },
@@ -157,7 +154,7 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-4xl font-extrabold text-navy-900 mb-4">Tipe Kamar Kos</h2>
               <p className="text-slate-600 text-lg">Kami menyediakan berbagai tipe kamar sesuai kebutuhan Anda</p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
               {categories.map(({ Icon, name, count }, i) => (
                 <ScrollReveal key={i} delay={i * 0.1}>
                   <div className="bg-white border border-slate-100 rounded-2xl p-6 text-center hover:border-orange-500 hover:shadow-orange-sm transition-all duration-300 group cursor-pointer hover:-translate-y-1">
@@ -410,7 +407,7 @@ export default function HomePage() {
                 Hunian nyaman, aman, dan terjangkau di Gempol, Pasuruan. Pilihan terpercaya sejak lama.
               </p>
               <div className="flex flex-col gap-3 font-semibold text-slate-700 text-sm">
-                <a href="tel:085649814066" className="flex items-center gap-3 hover:text-orange-500"><Phone size={16} className="text-slate-400" /> 0856-4981-4066</a>
+                <a href="tel:085649814066" className="flex items-center gap-3 hover:text-orange-500"><Phone size={16} className="text-slate-400" /> 0856-4981-4066 <br /> 0822-3327-6629</a>
                 <a href="https://wa.me/6285649814066" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-orange-500"><MessageCircle size={16} className="text-slate-400" /> Chat WhatsApp</a>
                 <a href="https://maps.google.com/?q=Gempol+Pasuruan" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-orange-500"><MapPin size={16} className="text-slate-400" /> Lihat di Maps</a>
               </div>
@@ -430,7 +427,7 @@ export default function HomePage() {
             <div className="lg:col-span-2">
               <h4 className="font-extrabold text-navy-900 mb-6">Fasilitas</h4>
               <ul className="flex flex-col gap-3 text-sm font-semibold text-slate-600">
-                {["WiFi Gratis", "Kamar Mandi", "Kipas / AC", "Parkir Motor", "Keamanan 24 Jam", "Air Bersih"].map(f => (
+                {["WiFi Gratis", "Kamar Mandi", "Parkir Motor", "Keamanan 24 Jam", "Air Bersih"].map(f => (
                   <li key={f}><a href="#" className="hover:text-orange-500 transition-colors">{f}</a></li>
                 ))}
               </ul>
