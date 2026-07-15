@@ -57,7 +57,17 @@ const fasilitasList = [
 
 const lokasiItems = [
   { Icon: MapPin, label: "Alamat", value: "Jembrung Dua, Bulusari, Gempol, Pasuruan Regency, Jawa Timur 67155", href: null },
-  { Icon: Phone, label: "Telepon / WA", value: "0856-4981-4066", href: "tel:085649814066" },
+  {
+    Icon: Phone,
+    label: "Telepon / WA",
+    value: (
+      <div className="flex flex-col gap-1">
+        <a href="tel:085649814066" className="font-bold text-orange-500 hover:text-orange-600 text-sm transition-colors">0856-4981-4066</a>
+        <a href="tel:082233276629" className="font-bold text-orange-500 hover:text-orange-600 text-sm transition-colors">0822-3327-6629</a>
+      </div>
+    ),
+    href: null
+  },
   { Icon: Clock, label: "Jam Survei", value: "Setiap hari 08.00 – 20.00 WIB", href: null },
   { Icon: MessageCircle, label: "WhatsApp", value: "Chat 24 jam siap dibalas", href: null },
 ];
@@ -330,7 +340,7 @@ export default function HomePage() {
                         <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">{label}</div>
                         {href
                           ? <a href={href} className="font-bold text-orange-500 hover:text-orange-600 text-sm">{value}</a>
-                          : <span className="font-semibold text-navy-900 text-sm">{value}</span>
+                          : <div className="font-semibold text-navy-900 text-sm">{value}</div>
                         }
                       </div>
                     </div>
@@ -380,9 +390,6 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href="https://wa.me/6285649814066?text=Halo%2C+saya+ingin+menanyakan+kamar+Kos+Pintu+Berkah" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center gap-2 bg-white hover:bg-slate-50 text-navy-900 font-bold px-8 py-4 rounded-xl transition-transform hover:-translate-y-1">
                 <MessageCircle size={20} /> Chat WhatsApp Sekarang
-              </a>
-              <a href="tel:085649814066" className="flex justify-center items-center gap-2 border-2 border-slate-700 hover:border-slate-500 text-white font-bold px-8 py-4 rounded-xl transition-colors">
-                <Phone size={20} /> Telepon Langsung
               </a>
             </div>
           </div>
@@ -453,7 +460,7 @@ export default function HomePage() {
 
           {/* Bottom */}
           <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-semibold text-slate-500">
-            <span>© 2025 Kos Pintu Berkah · Jembrung Dua, Bulusari, Gempol, Pasuruan 67155</span>
+            <span>© 2026 Kos Pintu Berkah · Jembrung Dua, Bulusari, Gempol, Pasuruan 67155</span>
             <div className="flex gap-6">
               <a href="#" className="hover:text-navy-900">Privasi</a>
               <a href="#" className="hover:text-navy-900">Ketentuan</a>
