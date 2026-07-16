@@ -73,9 +73,9 @@ const lokasiItems = [
 ];
 
 const reviews = [
-  { stars: 5, text: "Kos Pintu Berkah nyaman dan aman. Dekat dengan keramaian dan pasar, mudah akses segala keperluan. Pemiliknya juga sangat baik!", name: "Ahmad R.", role: "Penghuni 2 Tahun", bg: "bg-orange-500", initial: "A" },
-  { stars: 5, text: "Tempat tinggal yang tenang dan bersih. Pengelola ramah dan cepat respon jika ada masalah. Sangat rekomendasikan untuk yang cari kos di Gempol!", name: "Siti N.", role: "Penghuni 1 Tahun", bg: "bg-navy-900", initial: "S" },
-  { stars: 5, text: "Strategis banget! Dekat pasar Gempol, mudah kemana-mana. Harga terjangkau dengan fasilitas yang lengkap. Worth it banget pokoknya!", name: "Budi P.", role: "Penghuni 6 Bulan", bg: "bg-emerald-500", initial: "B" },
+  { stars: 5, text: "Kos Pintu Berkah nyaman. Dekat dengan keramaian dan pasar, mudah akses segala keperluan. Pemiliknya juga sangat baik!", name: "Pak Crepes", role: "Penghuni 2 Tahun", bg: "bg-orange-500", initial: "A" },
+  { stars: 4, text: "Tempat tinggal yang tenang dan bersih. Pengelola ramah dan cepat respon jika ada masalah. Sangat rekomendasikan untuk yang cari kos di Bulusari, Gempol", name: "Mas Faisal", role: "Penghuni 1 Tahun", bg: "bg-navy-900", initial: "S" },
+  { stars: 5, text: "Strategis banget! Dekat pasar Gempol, mudah kemana-mana. Harga terjangkau dengan fasilitas yang lengkap, apalagi kamar mandi dalam", name: "Pak Surtijo", role: "Penghuni 6 Bulan", bg: "bg-emerald-500", initial: "B" },
 ];
 
 export default function HomePage() {
@@ -96,15 +96,15 @@ export default function HomePage() {
                 <div className="grid grid-cols-2 gap-4 relative">
                   <div className="col-span-1 row-span-2 rounded-3xl overflow-hidden shadow-xl aspect-[4/7]">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/kos_hero_modern.png" alt="Kos Pintu Berkah" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    <img src="/kosGambar.png" alt="Kos Pintu Berkah" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="col-span-1 rounded-3xl overflow-hidden shadow-md aspect-square">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/kos_room_card1.png" alt="Kamar" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    <img src="/kosGambar.png" alt="Kamar" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="col-span-1 rounded-3xl overflow-hidden shadow-md aspect-square">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/kos_common_area.png" alt="Area bersama" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    <img src="/kosGambar.png" alt="Area bersama" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                   </div>
 
                   {/* Floating Badge */}
@@ -434,7 +434,7 @@ export default function HomePage() {
             <div className="lg:col-span-2">
               <h4 className="font-extrabold text-navy-900 mb-6">Fasilitas</h4>
               <ul className="flex flex-col gap-3 text-sm font-semibold text-slate-600">
-                {["WiFi Gratis", "Kamar Mandi", "Parkir Motor", "Keamanan 24 Jam", "Air Bersih"].map(f => (
+                {["Kamar Mandi", "Parkir Motor", "Keamanan 24 Jam", "Air Bersih"].map(f => (
                   <li key={f}><a href="#" className="hover:text-orange-500 transition-colors">{f}</a></li>
                 ))}
               </ul>
