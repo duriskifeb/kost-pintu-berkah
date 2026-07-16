@@ -220,7 +220,7 @@ export default function HomePage() {
                   {/* Floating Price */}
                   <div className="absolute top-8 -left-4 md:-left-8 bg-white rounded-2xl p-5 shadow-xl border border-slate-100">
                     <div className="text-xs font-bold text-slate-500 uppercase tracking-wide mb-1">Mulai dari</div>
-                    <div className="text-2xl font-extrabold text-orange-500">Rp 450rb</div>
+                    <div className="text-2xl font-extrabold text-orange-500">Rp 500rb</div>
                     <div className="text-xs font-semibold text-slate-500 mt-1">per bulan</div>
                   </div>
                   {/* Floating Rating */}
