@@ -93,23 +93,40 @@ export default function HomePage() {
 
               {/* Left – Image collage */}
               <ScrollReveal>
-                <div className="grid grid-cols-2 gap-4 relative">
-                  <div className="col-span-1 row-span-2 rounded-3xl overflow-hidden shadow-xl aspect-[4/7]">
+                <div className="relative w-full max-w-[450px] sm:max-w-[500px] aspect-square mx-auto mb-20 sm:mb-24 mt-8">
+                  {/* Image 1 - Top Left */}
+                  <div className="absolute top-0 left-0 w-[45%] aspect-square rounded-tl-[2.5rem] rounded-br-[2.5rem] rounded-tr-xl rounded-bl-xl overflow-hidden shadow-xl border-4 border-white z-10 hover:z-30 hover:scale-[1.03] hover:-rotate-2 transition-all duration-500">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/kosGambar.png" alt="Kos Pintu Berkah" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    <img src="/gambarKos1.jpeg" alt="Kos Pintu Berkah" className="w-full h-full object-cover" />
                   </div>
-                  <div className="col-span-1 rounded-3xl overflow-hidden shadow-md aspect-square">
+
+                  {/* Image 2 - Top Right */}
+                  <div className="absolute top-[8%] right-0 w-[42%] aspect-square rounded-tr-[2.5rem] rounded-bl-[2.5rem] rounded-tl-xl rounded-br-xl overflow-hidden shadow-xl border-4 border-white z-10 hover:z-30 hover:scale-[1.03] hover:rotate-2 transition-all duration-500">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/kosGambar.png" alt="Kamar" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    <img src="/gambarKos2.jpeg" alt="Kamar Standar" className="w-full h-full object-cover" />
                   </div>
-                  <div className="col-span-1 rounded-3xl overflow-hidden shadow-md aspect-square">
+
+                  {/* Image 4 - Bottom Left */}
+                  <div className="absolute bottom-[10%] left-[2%] w-[42%] aspect-square rounded-bl-[2.5rem] rounded-tr-[2.5rem] rounded-tl-xl rounded-br-xl overflow-hidden shadow-xl border-4 border-white z-10 hover:z-30 hover:scale-[1.03] hover:-rotate-2 transition-all duration-500">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/kosGambar.png" alt="Area bersama" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                    <img src="/gambarKos4.jpeg" alt="Area Bersama" className="w-full h-full object-cover" />
+                  </div>
+
+                  {/* Image 5 - Bottom Right */}
+                  <div className="absolute bottom-0 right-[5%] w-[46%] aspect-square rounded-br-[2.5rem] rounded-tl-[2.5rem] rounded-tr-xl rounded-bl-xl overflow-hidden shadow-xl border-4 border-white z-10 hover:z-30 hover:scale-[1.03] hover:rotate-2 transition-all duration-500">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/gambarKos5.jpeg" alt="Fasilitas Kos" className="w-full h-full object-cover" />
+                  </div>
+
+                  {/* Image 3 - Center */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[52%] aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white z-20 hover:z-30 hover:scale-[1.08] transition-all duration-500">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/gambarKos3.jpeg" alt="Kamar Deluxe" className="w-full h-full object-cover" />
                   </div>
 
                   {/* Floating Badge */}
-                  <div className="absolute -bottom-6 left-6 md:left-8 bg-white rounded-2xl p-4 shadow-xl border border-slate-100 flex items-center gap-3">
-                    <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center">
+                  <div className="absolute -bottom-16 sm:-bottom-20 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-4 md:left-8 bg-white rounded-2xl p-4 shadow-xl border border-slate-100 flex items-center gap-3 z-40 w-max">
+                    <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Award size={24} className="text-orange-500" />
                     </div>
                     <div>
